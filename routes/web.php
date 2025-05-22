@@ -10,6 +10,7 @@ use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\LiveTournamentsController;
 use App\Http\Controllers\HighStakesTablesController;
 use App\Http\Controllers\MemberBenefitsController;
+use App\Http\Controllers\AboutController;
 
 
 // Landing / Home
@@ -47,4 +48,10 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/member-benefits', [MemberBenefitsController::class, 'show'])->name('member.benefits');
 Route::get('/live-tournaments', [LiveTournamentsController::class, 'show'])->name('live.tournaments');
 Route::get('/high-stakes-tables', [HighStakesTablesController::class, 'show'])->name('high.stakes.tables');
+
+
+Route::get('/about/who-we-are', [AboutController::class, 'who'])->name('about.who');
+Route::get('/about/our-mission', [AboutController::class, 'mission'])->name('about.mission');
+Route::get('/about/vision-values', [AboutController::class, 'vision'])->name('about.vision');
+
 
