@@ -7,6 +7,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UserDashboardController;
+use App\Http\Controllers\LiveTournamentsController;
+use App\Http\Controllers\HighStakesTablesController;
+use App\Http\Controllers\MemberBenefitsController;
 
 
 // Landing / Home
@@ -38,3 +41,10 @@ Route::middleware('auth')->get('/dashboard', [UserDashboardController::class, 'i
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
 });
+
+
+
+Route::get('/member-benefits', [MemberBenefitsController::class, 'show'])->name('member.benefits');
+Route::get('/live-tournaments', [LiveTournamentsController::class, 'show'])->name('live.tournaments');
+Route::get('/high-stakes-tables', [HighStakesTablesController::class, 'show'])->name('high.stakes.tables');
+

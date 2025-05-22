@@ -17,15 +17,23 @@
     <section class="mt-16 grid md:grid-cols-3 gap-8 text-left">
         <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-red-700 shadow-lg">
             <h3 class="text-2xl font-bold text-gold mb-2">🎲 Live Tournaments</h3>
-            <p class="text-gray-300">Experience real-time action in our exclusive, members-only events.</p>
+            <p class="text-gray-300">
+                Experience real-time action in our exclusive, members-only events.
+                <a href="{{ route('live.tournaments') }}" class="text-gold hover:underline ml-2">View</a>
+            </p>
         </div>
+
         <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-gold shadow-lg">
             <h3 class="text-2xl font-bold text-gold mb-2">💰 High-Stakes Tables</h3>
-            <p class="text-gray-300">Compete with elite players for serious prizes and recognition.</p>
+            <p class="text-gray-300">
+                Compete with elite players for serious prizes and recognition.
+                <a href="{{ route('high.stakes.tables') }}" class="text-gold hover:underline ml-2">View</a>
+            </p>
         </div>
-        <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-red-700 shadow-lg">
+       <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-red-700 shadow-lg">
             <h3 class="text-2xl font-bold text-gold mb-2">♣ Member Benefits</h3>
             <p class="text-gray-300">Gain access to premium perks, loyalty rewards, and exclusive invites.</p>
+            <a href="{{ route('member.benefits') }}" class="text-gold underline text-sm mt-2 inline-block">Read More</a>
         </div>
     </section>
 
